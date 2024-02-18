@@ -8,7 +8,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: "http://localhost:3000", // URL del frontend
+    // URL del frontend ambiente de desarrollo
+    origin: "http://localhost:5173", 
+    // URL del frontend ambiente de producción
+    // origin: "https://boke-gilt.vercel.app/",
     credentials: true, // Habilita el envio de cookies
   })
 );
