@@ -21,10 +21,6 @@ router.post("/register", async (req, res) => {
 // Ruta para el inicio de sesión de usuario
 router.post("/login", async (req, res) => {
   try {
-    // Aquí puedes implementar la lógica de inicio de sesión
-    // Por ejemplo, verificar si las credenciales son válidas en la base de datos
-
-    // Supongamos que tienes un método en UserModel para verificar las credenciales
     const user = await UserModel.authenticate(req.body.email, req.body.password);
 
     if (user) {
